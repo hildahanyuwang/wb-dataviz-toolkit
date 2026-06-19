@@ -49,19 +49,24 @@ every chart that uses it — the same discipline as Workflow 2's `wb.css`.
 1-traditional-stata-r-python/
 ├── data/
 │   ├── leads_workshops.csv      # one row per LEADS workshop (the input you swap)
-│   └── dime_scale.csv           # tidy DIME scale KPIs
+│   ├── dime_scale.csv           # tidy DIME scale KPIs
+│   ├── ie_coefficients.csv      # illustrative treatment estimates + 95% CIs
+│   └── ie_eventstudy.csv        # illustrative event-study coefficients + SEs
 ├── python/
 │   ├── dime_style.py            # REUSABLE house-style theme (palette + helpers)
 │   ├── leads_charts.py          # thin driver: load CSV -> dime_barh -> PNG
+│   ├── coefficient_plot.py      # thin driver: coefficient plot + event study
 │   ├── requirements.txt
 │   └── output/                  # PNGs (generated)
 ├── R/
 │   ├── theme_dime.R             # REUSABLE theme_dime() + dime_barh()
 │   ├── leads_charts.R           # thin driver, sources theme_dime.R
+│   ├── coefficient_plot.R       # coefficient plot + event study (sources theme_dime.R)
 │   └── output/                  # PNG (generated)
 ├── stata/
 │   ├── dime_scheme.do           # REUSABLE dime_hbar program
-│   └── leads_charts.do          # thin driver, runs dime_scheme.do then calls dime_hbar
+│   ├── leads_charts.do          # thin driver, runs dime_scheme.do then calls dime_hbar
+│   └── coefficient_plot.do      # coefficient plot + event study
 └── README.md
 ```
 
@@ -99,6 +104,11 @@ theme file, not the driver:
   LEADS workshop (Python, R, and Stata each reproduce this from the same CSV via the helper).
 - **`coverage_gap.png`** (Python) — a 100-square waffle showing that *fewer than 5% of World
   Bank projects include an impact evaluation*.
+- **`coefficient_plot.png`** and **`event_study.png`** — the two chart types that signal a
+  credible impact evaluation: a **coefficient plot** (point estimate + 95% CI per treatment, with
+  a zero reference line) and an **event study** (effect over time, with a confidence band and a
+  flat pre-trend before t = 0). Reproduced in Python, R, and Stata from `data/ie_coefficients.csv`
+  and `data/ie_eventstudy.csv`. The bundled numbers are an illustrative example, not real results.
 
 ---
 
@@ -111,7 +121,8 @@ cd python
 pip install -r requirements.txt
 python leads_charts.py                    # uses ../data/leads_workshops.csv
 python leads_charts.py path/to/other.csv  # any tidy CSV with the same columns
-# -> output/leads_financing.png, output/coverage_gap.png
+python coefficient_plot.py                # coefficient plot + event study
+# -> output/leads_financing.png, output/coverage_gap.png, output/coefficient_plot.png, output/event_study.png
 ```
 
 The toolkit uses the non-interactive `Agg` backend, so it renders straight to PNG with no
@@ -123,7 +134,8 @@ display required. `leads_charts.py` imports the reusable style from `dime_style.
 cd R
 Rscript leads_charts.R                    # uses ../data/leads_workshops.csv
 Rscript leads_charts.R other.csv          # any tidy CSV with the same columns
-# -> output/leads_financing.png
+Rscript coefficient_plot.R                # coefficient plot + event study
+# -> output/leads_financing.png, output/coefficient_plot.png, output/event_study.png
 ```
 `leads_charts.R` sources `theme_dime.R`. Requires `ggplot2`, `dplyr`, `readr`.
 
@@ -132,7 +144,8 @@ Rscript leads_charts.R other.csv          # any tidy CSV with the same columns
 ```stata
 cd stata
 do leads_charts.do
-* -> stata/leads_financing.png
+do coefficient_plot.do
+* -> stata/leads_financing.png, stata/coefficient_plot.png, stata/event_study.png
 ```
 `leads_charts.do` runs `dime_scheme.do` (which defines `dime_hbar`) then calls it. Base Stata
 only — no community add-ons required.

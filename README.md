@@ -3,6 +3,8 @@
 **Two reusable workflows for producing World Bank / DIME-style knowledge products —
 charts, infographics, social cards and newsletters — from public data.**
 
+🔗 **Live portfolio:** [wb.hanyuwang.work](https://wb.hanyuwang.work) — these workflows produce the sample work shown there.
+
 Pick the route that fits the deliverable: a **traditional Stata / R / Python charting
 toolkit** for rigorous, reproducible exhibits, or an **AI-assisted content studio** for
 composed, web-ready products. Both share the same house style (World Bank blues, direct data
@@ -86,5 +88,6 @@ are flagged and anything unverifiable is dropped. See
 ## Origin & license
 
 Built by **Hanyu (Hilda) Wang** as spec work for a World Bank DECDI Knowledge Management &
-Communications application, and shared here as a reusable toolkit. MIT licensed — see
+Communications application, and shared here as a reusable toolkit. See the full interactive
+portfolio at **[wb.hanyuwang.work](https://wb.hanyuwang.work)**. MIT licensed — see
 [`LICENSE`](./LICENSE).

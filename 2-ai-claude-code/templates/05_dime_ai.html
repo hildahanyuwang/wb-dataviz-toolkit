@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link href="wb.css" rel="stylesheet" />
+<style>
+  .poster{width:1080px;height:1070px}
+  .timeline{padding:18px 60px 2px}
+  .timeline .h{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mid)}
+  .tl{position:relative;display:flex;margin-top:14px}
+  .tl-line{position:absolute;left:12.5%;right:12.5%;top:26px;height:2px;background:var(--rule);z-index:0}
+  .tl .t{flex:1;text-align:center}
+  .tl .t .p{font-size:12.5px;color:var(--mid);font-weight:700;margin-bottom:8px;min-height:16px}
+  .tl .t .dot{width:13px;height:13px;border-radius:50%;background:var(--electric);margin:0 auto;position:relative;z-index:1;box-shadow:0 0 0 4px #fff}
+  .tl .t .y{font-size:16px;font-weight:800;color:var(--oxford);margin-top:9px}
+  .band{padding:42px 60px 34px}
+  .band .motif{right:-150px;top:-150px;width:480px;height:480px}
+  .band .ey{color:var(--electric)}
+  .band h1{font-weight:800;font-size:48px;letter-spacing:-.02em;margin-top:14px;line-height:1.04}
+  .band p.sub{font-weight:300;font-size:19px;color:#cfe0ea;margin-top:12px;max-width:52ch}
+  .band .tags{margin-top:22px;display:flex;gap:14px}
+  .band .tags div{background:rgba(255,255,255,.07);border-left:3px solid var(--electric);padding:10px 16px;border-radius:2px}
+  .band .tags b{font-size:22px;font-weight:800;color:#fff}
+  .band .tags span{font-size:12.5px;color:#aebfca;display:block;margin-top:2px}
+
+  .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;padding:30px 60px 8px}
+  .p{background:var(--surface);border-radius:3px;border-top:3px solid var(--electric);padding:20px 18px}
+  .p .nm{font-size:19px;font-weight:800;color:var(--oxford);letter-spacing:-.01em}
+  .p .yr{font-size:11px;font-weight:700;color:var(--mid);letter-spacing:.06em;margin-top:2px}
+  .p .stat{font-size:15px;font-weight:800;color:var(--electric);margin-top:12px}
+  .p .stat em{font-style:normal;color:var(--oxford)}
+  .p .d{font-size:13px;color:var(--ink);line-height:1.42;margin-top:6px}
+
+  .quote{margin:18px 60px 0;background:var(--oxford);color:#fff;border-radius:4px;padding:24px 30px}
+  .quote p{font-size:19px;font-weight:300;line-height:1.4}
+  .quote p b{font-weight:700;color:var(--electric)}
+
+  .foot{padding:18px 60px 22px}
+  .foot .src{font-size:11.5px;max-width:64ch}
+  .foot .by{font-size:12px}
+  .foot .by span{font-size:11px}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <div class="band">
+    <svg class="motif" viewBox="0 0 600 600"><circle cx="300" cy="300" r="80" fill="none" stroke="#fff" stroke-width="1"/><circle cx="300" cy="300" r="150" fill="none" stroke="#fff" stroke-width="1"/><circle cx="300" cy="300" r="220" fill="none" stroke="#fff" stroke-width="1"/><circle cx="300" cy="300" r="290" fill="none" stroke="#fff" stroke-width="1"/></svg>
+    <div class="ey">Development Impact · Artificial Intelligence</div>
+    <h1>Research, shipped as AI<br>governments can use</h1>
+    <p class="sub">DIME publishes the science, ships the systems built on it, and rigorously evaluates their real-world impact — all in one place.</p>
+    <div class="tags">
+      <div><b>30+</b><span>scientists, engineers &amp; researchers</span></div>
+      <div><b>$20M</b><span>Google.org Generative AI Accelerator</span></div>
+    </div>
+  </div>
+
+  <div class="timeline">
+    <div class="h">A four-year trajectory — science to shipped systems</div>
+    <div class="tl">
+      <span class="tl-line"></span>
+      <div class="t"><div class="p">EconBERTa</div><div class="dot"></div><div class="y">2023</div></div>
+      <div class="t"><div class="p">NaijaXLM-T · NaijaHate</div><div class="dot"></div><div class="y">2024</div></div>
+      <div class="t"><div class="p">ImpactAI</div><div class="dot"></div><div class="y">2025</div></div>
+      <div class="t"><div class="p">ZeroHungerAI · HateDay</div><div class="dot"></div><div class="y">2026</div></div>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div class="p"><div class="nm">ImpactAI</div><div class="yr">LAUNCHED 2025</div>
+      <div class="stat"><em>1,000s</em> of studies</div>
+      <div class="d">Conversational agent that synthesizes rigorous causal evidence with full source attribution.</div></div>
+    <div class="p"><div class="nm">ZeroHungerAI</div><div class="yr">2026</div>
+      <div class="stat"><em>82</em> IDA countries</div>
+      <div class="d">Weekly, district-level food-crisis early warning from 11M news articles.</div></div>
+    <div class="p"><div class="nm">EconBERTa</div><div class="yr">2023</div>
+      <div class="stat"><em>1.5M</em> articles</div>
+      <div class="d">A domain language model pretrained on economic research, with the EconIE dataset.</div></div>
+    <div class="p"><div class="nm">NaijaXLM-T</div><div class="yr">2024</div>
+      <div class="stat"><em>90%</em> vs 60% accuracy</div>
+      <div class="d">Outperforms generic frontier models on Nigerian online hate-speech detection.</div></div>
+    <div class="p"><div class="nm">HateDay</div><div class="yr">2026</div>
+      <div class="stat"><em>8</em> languages</div>
+      <div class="d">First global hate-speech dataset representative of a single day on Twitter.</div></div>
+    <div class="p"><div class="nm">NaijaHate</div><div class="yr">2024</div>
+      <div class="stat"><em>1st</em> of its kind</div>
+      <div class="d">First annotated hate-speech dataset on representative Nigerian tweets.</div></div>
+  </div>
+
+  <div class="quote"><p>“We <b>publish the science</b>, <b>ship the systems</b>, and <b>evaluate the impact</b> — all in the same place.”</p></div>
+
+  <div class="foot">
+    <div class="src">Source: World Bank Development Impact (DECDI) — DIME Artificial Intelligence, worldbank.org. Figures as published.<br>Sample visualization — not an official World Bank publication. No World Bank logo or branding is used.</div>
+    <div class="by">Hanyu Wang<span>Communications &amp; KM</span></div>
+  </div>
+
+</div>
+</body>
+</html>

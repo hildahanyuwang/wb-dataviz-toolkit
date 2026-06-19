@@ -1,0 +1,75 @@
+/* =========================================================================
+   WB / DIME spec-work design system  —  shared visual language
+   Palette: World Bank Group official (Solid Blue #002244, Bright Blue #009FDA,
+   Mid Blue #006C99, sparing warm accent Gold #FDB714). Type: Inter (Andes-like
+   geometric sans substitute). Chart rules follow DIME Analytics conventions:
+   direct labels, no redundant gridlines, zero baseline, source note at foot.
+   ========================================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+  --oxford:#002244; --oxford2:#001833; --electric:#009FDA; --mid:#006C99;
+  --gold:#FDB714; --surface:#F7F9FA; --rule:#E4EAEE; --ink:#2B3A45; --muted:#64737E;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{font-family:'Inter','Segoe UI',Arial,sans-serif;-webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility}
+
+/* canvas */
+.poster{background:#fff;display:flex;flex-direction:column;overflow:hidden;position:relative}
+
+/* eyebrow / kicker */
+.ey{font-size:13px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--electric)}
+
+/* navy top band with radial motif */
+.band{background:var(--oxford);color:#fff;position:relative;overflow:hidden}
+.band .motif{position:absolute;opacity:.16;pointer-events:none}
+.band .motif circle{fill:none;stroke:#fff;stroke-width:1}
+
+/* KPI row */
+.kpis{display:flex;border-bottom:1px solid var(--rule)}
+.kpi{flex:1;padding:0 26px}
+.kpi:first-child{padding-left:0}
+.kpi+.kpi{border-left:1px solid var(--rule)}
+.kpi .num{font-weight:800;color:var(--oxford);letter-spacing:-.02em;line-height:1}
+.kpi .num em{font-style:normal;color:var(--electric)}
+.kpi .lab{font-weight:600;color:var(--mid);margin-top:8px}
+.kpi .ctx{color:var(--muted);margin-top:3px}
+
+/* section header */
+.sec h2{font-weight:700;color:var(--oxford);letter-spacing:-.01em}
+.sec .note{color:var(--muted);margin-top:4px}
+
+/* directly-labeled horizontal bars (DIME style: no gridlines, label on bar) */
+.bar{display:grid;align-items:center}
+.bar .who b{display:block;font-weight:700;color:var(--oxford);line-height:1.1}
+.bar .who span{color:var(--muted)}
+.bar .track{position:relative;background:var(--surface);border-radius:2px}
+.bar .fill{position:absolute;left:0;top:0;height:100%;border-radius:2px;display:flex;
+  align-items:center;justify-content:flex-end;color:#fff;font-weight:800}
+.bar .meta{position:absolute;top:50%;transform:translateY(-50%);
+  color:rgba(255,255,255,.92);font-weight:500}
+
+/* stat / result cards */
+.card{background:var(--surface);border-radius:3px;border-top:3px solid var(--electric)}
+.card .ico{color:var(--mid)}
+.card .big{font-weight:800;color:var(--oxford);line-height:1.05}
+.card .big em{font-style:normal;color:var(--electric)}
+.card .d{color:var(--ink)}
+
+/* dark "the case" call-out strip */
+.case{background:var(--oxford);color:#fff;border-radius:4px;display:flex;align-items:center}
+.case .lead b{color:var(--gold)}
+.case .big2 .a{color:#bcd}
+.case .big2 .b em{font-style:normal;color:var(--electric)}
+
+/* footer: source + attribution */
+.foot{margin-top:auto;display:flex;justify-content:space-between;align-items:flex-end;
+  border-top:1px solid var(--rule)}
+.foot .src{color:var(--muted);line-height:1.5}
+.foot .by{font-weight:700;color:var(--oxford);text-align:right;letter-spacing:.02em}
+.foot .by span{display:block;font-weight:500;color:var(--muted);margin-top:2px}
+
+/* sample stamp */
+.stamp{display:inline-block;border:1px solid var(--rule);color:var(--muted);
+  font-size:11px;font-weight:600;letter-spacing:.04em;padding:4px 10px;border-radius:2px}

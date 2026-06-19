@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link href="wb.css" rel="stylesheet" />
+<script src="landpaths.js"></script>
+<script src="leadsmap.js"></script>
+<style>
+  .poster{width:1080px;height:1440px}
+  .reach{padding:12px 60px 4px}
+  .reach .frame{border:1px solid var(--rule);border-radius:4px;overflow:hidden;line-height:0;background:#fff;max-width:740px;margin:0 auto}
+  .rkpi{display:flex;margin-top:14px}
+  .rkpi>div{flex:1;padding:0 20px}
+  .rkpi>div:first-child{padding-left:0}
+  .rkpi>div+div{border-left:1px solid var(--rule)}
+  .rkpi b{font-size:34px;font-weight:800;color:var(--electric);letter-spacing:-.02em}
+  .rkpi b i{font-style:normal;color:var(--oxford)}
+  .rkpi span{display:block;font-size:13.5px;color:var(--mid);font-weight:600;margin-top:6px}
+  .band{padding:42px 60px 36px}
+  .band .motif{right:-150px;top:-150px;width:480px;height:480px}
+  .band h1{font-weight:800;font-size:48px;letter-spacing:-.02em;margin-top:14px;line-height:1.05}
+  .band p.sub{font-weight:300;font-size:20px;color:#cfe0ea;margin-top:12px;max-width:46ch}
+
+  /* distribute the three panels evenly down the page */
+  .content{flex:1;display:flex;flex-direction:column;justify-content:space-evenly}
+  .grp+.grp{border-top:1px solid var(--rule)}
+  .head{padding:0 60px}
+  .head h2{font-size:25px;font-weight:700;color:var(--oxford);letter-spacing:-.01em}
+  .head .note{font-size:15px;color:var(--muted);margin-top:5px}
+
+  /* waffle */
+  .waffle-wrap{display:flex;gap:44px;align-items:center;padding:24px 60px 6px}
+  .waffle{display:grid;grid-template-columns:repeat(10,1fr);gap:5px;width:340px}
+  .waffle span{aspect-ratio:1;background:var(--surface);border-radius:2px}
+  .waffle span.on{background:var(--electric)}
+  .waffle-key .k{font-size:64px;font-weight:800;color:var(--electric);line-height:1}
+  .waffle-key .t{font-size:19px;color:var(--ink);margin-top:10px;max-width:24ch;line-height:1.4}
+  .waffle-key .leg{font-size:13px;color:var(--muted);margin-top:18px;display:flex;gap:18px}
+  .waffle-key .leg i{font-style:normal;display:inline-flex;align-items:center;gap:7px}
+  .waffle-key .leg b{width:14px;height:14px;border-radius:2px;display:inline-block}
+
+  /* compare bars */
+  .cmp{padding:22px 60px 6px;display:flex;flex-direction:column;gap:24px}
+  .cmp .row{display:grid;grid-template-columns:250px 1fr 100px;align-items:center;gap:18px}
+  .cmp .row .lab{font-size:15px;color:var(--oxford);font-weight:600;text-align:right;line-height:1.25}
+  .cmp .row .track{position:relative;height:42px;background:var(--surface);border-radius:2px}
+  .cmp .row .fill{position:absolute;left:0;top:0;height:100%;border-radius:2px}
+  .cmp .row .val{font-size:27px;font-weight:800;color:var(--oxford)}
+  .cmp .row .val em{font-style:normal;color:var(--electric)}
+
+  /* footprint KPI strip */
+  .strip{display:flex;padding:24px 60px 6px}
+  .strip .k{flex:1;padding:0 24px}
+  .strip .k:first-child{padding-left:0}
+  .strip .k+.k{border-left:1px solid var(--rule)}
+  .strip .k .n{font-size:50px;font-weight:800;color:var(--oxford);letter-spacing:-.02em;line-height:1}
+  .strip .k .n em{font-style:normal;color:var(--electric)}
+  .strip .k .l{font-size:14.5px;color:var(--mid);font-weight:600;margin-top:9px}
+
+  .foot{padding:22px 60px 24px}
+  .foot .src{font-size:11.5px;max-width:64ch}
+  .foot .by{font-size:12px}
+  .foot .by span{font-size:11px}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <div class="band">
+    <svg class="motif" viewBox="0 0 600 600">
+      <circle cx="300" cy="300" r="80"/><circle cx="300" cy="300" r="150"/>
+      <circle cx="300" cy="300" r="220"/><circle cx="300" cy="300" r="290"/>
+    </svg>
+    <div class="ey">Development Impact · Data brief</div>
+    <h1>Reading the evidence</h1>
+    <p class="sub">Three charts on the scale of impact evaluation — and the return on doing it well.</p>
+  </div>
+
+  <div class="content">
+    <!-- PANEL 1: waffle -->
+    <section class="grp">
+      <div class="head"><h2>The coverage gap</h2>
+        <div class="note">Share of World Bank projects that include an impact evaluation</div></div>
+      <div class="waffle-wrap">
+        <div class="waffle">
+          <span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="waffle-key">
+          <div class="k">&lt;5%</div>
+          <div class="t">Fewer than 1 in 20 projects is rigorously evaluated for impact.</div>
+          <div class="leg">
+            <i><b style="background:var(--electric)"></b>With evaluation</i>
+            <i><b style="background:var(--surface);border:1px solid var(--rule)"></b>Without</i>
+          </div>
+          <div class="leg" style="margin-top:10px">Each square = 1% of projects</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL 2: return on rigor -->
+    <section class="grp">
+      <div class="head"><h2>A small input, a large return</h2>
+        <div class="note">Research design as a share of project cost vs. the resulting gain in impact</div></div>
+      <div class="cmp">
+        <div class="row"><div class="lab">Project cost spent on<br>research design &amp; data</div>
+          <div class="track"><div class="fill" style="width:1%;background:var(--mid)"></div></div>
+          <div class="val"><em>&lt;1%</em></div></div>
+        <div class="row"><div class="lab">Resulting increase<br>in development impact</div>
+          <div class="track"><div class="fill" style="width:50%;background:var(--electric)"></div></div>
+          <div class="val"><em>+50%</em></div></div>
+      </div>
+    </section>
+
+    <!-- PANEL 3: global footprint map -->
+    <section class="grp">
+      <div class="head"><h2>A global footprint</h2>
+        <div class="note">DIME's reach worldwide — and the four LEADS convenings within it</div></div>
+      <div class="reach">
+        <div class="frame" id="worldmap"></div>
+        <div class="rkpi">
+          <div><b>60<i>+</i></b><span>countries</span></div>
+          <div><b>200<i>+</i></b><span>impact evaluations</span></div>
+          <div><b><i>$</i>26<i>B</i></b><span>finance shaped</span></div>
+          <div><b>30<i>+</i></b><span>agencies advised</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="foot">
+    <div class="src">Source: World Bank Development Impact (DECDI) — DIME flagship report “Driving Revolutionary Ideas into Practice” (2022) and the Development Impact Group overview, worldbank.org. Charts follow DIME Analytics visualization conventions (direct labels, zero baseline, no redundant gridlines).<br>Sample visualization — not an official World Bank publication.</div>
+    <div class="by">Hanyu Wang<span>Communications &amp; KM</span></div>
+  </div>
+
+</div>
+<script>document.getElementById('worldmap').innerHTML = window.worldReachMap();</script>
+</body>
+</html>

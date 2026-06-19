@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link href="wb.css" rel="stylesheet" />
+<style>
+  .poster{width:1360px;height:640px}
+  .band{padding:36px 56px 30px}
+  .band .motif{right:-130px;top:-150px;width:420px;height:420px}
+  .band .ey{color:var(--electric)}
+  .band h1{font-weight:800;font-size:38px;letter-spacing:-.02em;margin-top:12px;line-height:1.05}
+  .band p{font-weight:300;font-size:18px;color:#cfe0ea;margin-top:10px}
+
+  .flow{flex:1;display:flex;align-items:center;justify-content:space-between;
+    gap:6px;padding:30px 48px 10px}
+  .step{flex:1;background:var(--surface);border-top:3px solid var(--electric);border-radius:3px;
+    padding:18px 16px;align-self:stretch;display:flex;flex-direction:column}
+  .step.key{border-top-color:var(--gold);background:#FFF9EC}
+  .step .n{font-size:13px;font-weight:800;color:var(--electric);letter-spacing:.08em}
+  .step.key .n{color:#C9920A}
+  .step h3{font-size:18px;font-weight:700;color:var(--oxford);margin-top:8px;letter-spacing:-.01em}
+  .step p{font-size:12.5px;color:var(--ink);line-height:1.4;margin-top:7px}
+  .arr{color:var(--mid);font-size:24px;font-weight:700;flex:none}
+
+  .foot{padding:8px 56px 22px;border-top:1px solid var(--rule);margin:0 0 0}
+  .foot .src{font-size:12px;color:var(--muted)}
+  .foot .by{font-size:12px}
+  .foot .by span{font-size:11px}
+</style>
+</head>
+<body>
+<div class="poster">
+  <div class="band">
+    <svg class="motif" viewBox="0 0 600 600"><circle cx="300" cy="300" r="90"/><circle cx="300" cy="300" r="170"/><circle cx="300" cy="300" r="250"/></svg>
+    <div class="ey">AI-assisted production · Claude Code</div>
+    <h1>From verified data to a web-ready product</h1>
+    <p>One person holding the rigor of a research team and the throughput of a design studio.</p>
+  </div>
+
+  <div class="flow">
+    <div class="step"><div class="n">01</div><h3>Research</h3><p>Fan-out the primary DECDI / DIME sources; extract every figure and design cue.</p></div>
+    <div class="arr">&rarr;</div>
+    <div class="step key"><div class="n">02</div><h3>Verify</h3><p>Tag each number with its source URL; flag single-source claims; drop the unverifiable.</p></div>
+    <div class="arr">&rarr;</div>
+    <div class="step"><div class="n">03</div><h3>Systematize</h3><p>Encode the house style once — WB blues, type scale, DIME chart rules — as <b>wb.css</b>.</p></div>
+    <div class="arr">&rarr;</div>
+    <div class="step"><div class="n">04</div><h3>Compose</h3><p>Author each product in semantic HTML/CSS/SVG against that system.</p></div>
+    <div class="arr">&rarr;</div>
+    <div class="step"><div class="n">05</div><h3>Render</h3><p>Headless browser exports exact-size PNG &amp; PDF — repeatable, no manual export.</p></div>
+    <div class="arr">&rarr;</div>
+    <div class="step"><div class="n">06</div><h3>Integrate</h3><p>Drop into the React portfolio site — tokens already match, nothing looks bolted on.</p></div>
+  </div>
+
+  <div class="foot">
+    <div class="src">A reproducible, source-checked pipeline. This diagram was itself produced with the workflow it describes.</div>
+    <div class="by">Hanyu Wang<span>Communications &amp; KM</span></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,8 @@
+metric,value,unit,label
+countries,60,count,Countries with DIME activity (60+)
+impact_evaluations,200,count,Impact evaluations (200+)
+development_finance,26,usd_bn,Development finance shaped (US$26B)
+agencies_advised,30,count,Agencies advised (30+)
+projects_with_ie_share,5,percent,Share of World Bank projects with an impact evaluation (<5%)
+research_design_cost_share,1,percent,Project cost invested in research design (<1%)
+potential_impact_gain,50,percent,Potential increase in impact from research design (>50%)

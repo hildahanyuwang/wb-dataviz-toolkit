@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link href="wb.css" rel="stylesheet" />
+<style>
+  .poster{width:1200px;height:1200px;background:var(--oxford);color:#fff;padding:72px 76px 60px}
+  .motif{position:absolute;right:-220px;bottom:-220px;width:760px;height:760px;opacity:.10;pointer-events:none}
+  .motif circle{fill:none;stroke:#fff;stroke-width:1}
+  .ey{color:var(--electric);font-size:17px}
+  .lede{font-weight:300;font-size:34px;line-height:1.3;color:#dbe7ef;margin-top:24px;max-width:24ch}
+  .lede b{font-weight:700;color:#fff}
+
+  .stack{margin-top:44px;display:flex;flex-direction:column;gap:24px}
+  .line{display:flex;align-items:center;gap:40px}
+  .line .big{font-weight:800;letter-spacing:-.03em;line-height:.92;width:440px;text-align:right;flex:none}
+  .line .txt{font-size:22px;line-height:1.35;color:#cdddE8;max-width:24ch}
+  .pbar{margin-top:13px;height:9px;background:rgba(255,255,255,.10);border-radius:5px;width:300px}
+  .pbar span{display:block;height:100%;border-radius:5px}
+  .l1 .pbar span{background:#fff}
+  .l2 .pbar span{background:var(--electric)}
+  .l3 .pbar span{background:var(--gold)}
+  .l1 .big{font-size:128px;color:#fff}
+  .l2 .big{font-size:128px;color:var(--electric)}
+  .l3 .big{font-size:150px;color:var(--gold)}
+  .arrow{color:var(--electric);font-size:34px;margin:-4px 0 -4px 250px}
+
+  .foot{position:absolute;left:76px;right:76px;bottom:54px;border-top:1px solid rgba(255,255,255,.16);
+    padding-top:22px;display:flex;justify-content:space-between;align-items:flex-end}
+  .foot .src{font-size:14px;color:#9fb4c2;max-width:60ch;line-height:1.5}
+  .foot .who{text-align:right}
+  .foot .who b{font-size:17px;font-weight:700;color:#fff;letter-spacing:.02em}
+  .foot .who span{display:block;font-size:13px;color:#9fb4c2;margin-top:3px}
+  .tag{display:inline-block;border:1px solid rgba(255,255,255,.3);color:#9fb4c2;font-size:12px;
+    font-weight:600;letter-spacing:.05em;padding:5px 11px;border-radius:2px;margin-bottom:12px}
+</style>
+</head>
+<body>
+<div class="poster">
+  <svg class="motif" viewBox="0 0 600 600">
+    <circle cx="300" cy="300" r="90"/><circle cx="300" cy="300" r="160"/>
+    <circle cx="300" cy="300" r="230"/><circle cx="300" cy="300" r="300"/>
+  </svg>
+
+  <div class="ey">The economics of evidence</div>
+  <div class="lede">Rigorous evaluation is treated as a cost. <b>The data says it is the highest-leverage line item in a development budget.</b></div>
+
+  <div class="stack">
+    <div class="line l1"><div class="big">&lt;5%</div><div class="txt">of World Bank projects today include an impact evaluation<div class="pbar"><span style="width:5%"></span></div></div></div>
+    <div class="arrow">&darr;</div>
+    <div class="line l2"><div class="big">&lt;1%</div><div class="txt">of project cost is all it takes to build evaluation in<div class="pbar"><span style="width:1%"></span></div></div></div>
+    <div class="arrow">&darr;</div>
+    <div class="line l3"><div class="big">+50%</div><div class="txt">or greater increase in development impact<div class="pbar"><span style="width:50%"></span></div></div></div>
+  </div>
+
+  <div class="foot">
+    <div class="src"><span class="tag">SAMPLE · NOT AN OFFICIAL WORLD BANK PUBLICATION</span><br>
+      Source: DIME flagship report “Driving Revolutionary Ideas into Practice” (2022), worldbank.org.</div>
+    <div class="who"><b>Hanyu Wang</b><span>Communications &amp; Knowledge Management</span></div>
+  </div>
+</div>
+</body>
+</html>

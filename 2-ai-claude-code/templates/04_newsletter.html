@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link href="wb.css" rel="stylesheet" />
+<style>
+  .poster{width:1080px;height:1100px}
+  /* masthead */
+  .mast{background:var(--oxford);color:#fff;padding:38px 56px 30px;position:relative;overflow:hidden}
+  .mast .motif{position:absolute;right:-130px;top:-160px;width:420px;height:420px;opacity:.14}
+  .mast .motif circle{fill:none;stroke:#fff;stroke-width:1}
+  .mast .ey{color:var(--electric);font-size:12px}
+  .mast h1{font-weight:800;font-size:40px;letter-spacing:-.02em;margin-top:12px;line-height:1.02}
+  .mast .meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:14px;
+    border-top:1px solid rgba(255,255,255,.16);padding-top:12px}
+  .mast .meta .t{font-size:15px;color:#cfe0ea;font-weight:300}
+  .mast .meta .i{font-size:13px;color:#9fb4c2;font-weight:600}
+
+  .body{padding:0 56px}
+  /* lead story */
+  .lead{display:flex;gap:24px;padding:26px 0 22px;border-bottom:1px solid var(--rule)}
+  .lead .thumb{width:230px;height:150px;flex:none;border-radius:3px;
+    background:linear-gradient(135deg,var(--mid),var(--oxford));position:relative;overflow:hidden}
+  .lead .thumb .mb{position:absolute;left:18px;right:18px;bottom:26px;height:80px;display:flex;align-items:flex-end;gap:14px}
+  .lead .thumb .mb .b{flex:1;background:var(--electric);border-radius:2px 2px 0 0;position:relative}
+  .lead .thumb .mb .b i{position:absolute;top:-15px;left:0;right:0;text-align:center;font-style:normal;font-size:9.5px;font-weight:700;color:#d6ecf6}
+  .lead .thumb .cap{position:absolute;left:18px;bottom:9px;font-size:9px;color:#9fc3da}
+  .lead .thumb .lbl{position:absolute;left:16px;top:14px;color:#fff;font-size:12px;font-weight:700;letter-spacing:.12em}
+  .lead .c .k{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--electric)}
+  .lead .c h2{font-size:26px;font-weight:700;color:var(--oxford);line-height:1.15;margin-top:8px;letter-spacing:-.01em}
+  .lead .c p{font-size:15px;color:var(--ink);line-height:1.5;margin-top:10px}
+  .lead .c a{font-size:14px;font-weight:700;color:var(--mid);text-decoration:none;margin-top:10px;display:inline-block}
+
+  .sec{padding:20px 0 18px;border-bottom:1px solid var(--rule)}
+  .sec .h{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mid);
+    display:flex;align-items:center;gap:12px}
+  .sec .h::after{content:"";flex:1;height:1px;background:var(--rule)}
+  .item{display:flex;gap:14px;margin-top:14px}
+  .item .d{width:60px;flex:none;text-align:center;background:var(--surface);border-radius:3px;padding:7px 0}
+  .item .d b{display:block;font-size:19px;font-weight:800;color:var(--oxford);line-height:1}
+  .item .d span{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  .item .x b{font-size:15.5px;color:var(--oxford);font-weight:700}
+  .item .x p{font-size:13.5px;color:var(--ink);line-height:1.45;margin-top:3px}
+  .item .bul{width:8px;height:8px;border-radius:50%;background:var(--electric);flex:none;margin-top:7px}
+
+  .cta{background:var(--mid);color:#fff;display:flex;justify-content:space-between;align-items:center;
+    padding:20px 28px;border-radius:4px;margin:22px 0 0}
+  .cta .t b{font-size:18px;font-weight:700;display:block}
+  .cta .t span{font-size:13px;color:#d6ecf6}
+  .cta .btn{background:#fff;color:var(--mid);font-size:14px;font-weight:700;padding:11px 22px;border-radius:3px}
+
+  .nfoot{padding:16px 56px 20px;display:flex;justify-content:space-between;align-items:flex-end}
+  .nfoot .src{font-size:11px;color:var(--muted);max-width:62ch;line-height:1.5}
+  .nfoot .by{font-size:12px;font-weight:700;color:var(--oxford);text-align:right}
+  .nfoot .by span{display:block;font-weight:500;color:var(--muted);font-size:10.5px;margin-top:2px}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <div class="mast">
+    <svg class="motif" viewBox="0 0 600 600"><circle cx="300" cy="300" r="90"/><circle cx="300" cy="300" r="170"/><circle cx="300" cy="300" r="250"/></svg>
+    <div class="ey">Development Economics · Development Impact (DIME)</div>
+    <h1>Development Impact Evaluation News</h1>
+    <div class="meta"><div class="t">News, methods, and insights about impact evaluation</div>
+      <div class="i">Sample issue · June 2026</div></div>
+  </div>
+
+  <div class="body">
+    <!-- LEAD -->
+    <div class="lead">
+      <div class="thumb"><div class="lbl">FINANCING REVIEWED</div>
+        <div class="mb"><div class="b" style="height:92%"><i>$12.8B</i></div><div class="b" style="height:70%"><i>$9.7B</i></div><div class="b" style="height:38%"><i>$5.3B</i></div></div>
+        <div class="cap">Cape Town · New Delhi · Lomé</div></div>
+      <div class="c">
+        <div class="k">In focus</div>
+        <h2>Learn. Adapt. Scale. comes to East Asia</h2>
+        <p>The first LEADS convening in the region brought World Bank, JICA and ADB teams together in Tokyo to turn evidence into faster, higher-impact delivery — building on $18B reviewed across earlier cohorts.</p>
+        <a>Read the recap &rarr;</a>
+      </div>
+    </div>
+
+    <!-- EVENTS -->
+    <div class="sec">
+      <div class="h">Events, conferences &amp; courses</div>
+      <div class="item"><div class="d"><b>Jun</b><span>2026</span></div>
+        <div class="x"><b>MeasureDev 2026 — Open Science in the Age of AI</b>
+          <p>Balancing privacy and transparency in development data. Registration and the full agenda are open.</p></div></div>
+      <div class="item"><div class="d"><b>Jul</b><span>2026</span></div>
+        <div class="x"><b>Manage Successful Impact Evaluations — applied course</b>
+          <p>DIME Analytics' flagship training on designing and running rigorous evaluations.</p></div></div>
+    </div>
+
+    <!-- RESEARCH -->
+    <div class="sec">
+      <div class="h">New data &amp; research</div>
+      <div class="item"><div class="bul"></div>
+        <div class="x"><b>ImpactAI is live</b>
+          <p>The conversational agent that synthesizes thousands of rigorous causal studies — with full source attribution — is now open to policymakers.</p></div></div>
+      <div class="item"><div class="bul"></div>
+        <div class="x"><b>ZeroHungerAI expands to 82 IDA countries</b>
+          <p>Weekly, district-level food-crisis early warning, drawing on 11 million news articles.</p></div></div>
+    </div>
+
+    <!-- BLOG -->
+    <div class="sec">
+      <div class="h">From the Development Impact blog</div>
+      <div class="item"><div class="bul"></div>
+        <div class="x"><b>A milestone for open science: 500 packages in the Reproducible Research Repository</b>
+          <p>The repository crosses a major threshold for transparent, reusable research code.</p></div></div>
+      <div class="item"><div class="bul"></div>
+        <div class="x"><b>I read all 700+ pages of John List's Experimental Economics textbook — should you?</b>
+          <p>A practitioner's guide to what's worth your time.</p></div></div>
+    </div>
+
+    <div class="cta"><div class="t"><b>Stay up to date</b><span>Events, courses, and high-quality data &amp; research from DIME.</span></div>
+      <div class="btn">Subscribe</div></div>
+  </div>
+
+  <div class="nfoot">
+    <div class="src">Sample newsletter created for an application using publicly available World Bank information (DIME / DECDI, worldbank.org). Section structure follows the real Development Impact Evaluation News remit. Not an official World Bank publication; no logo or branding used.</div>
+    <div class="by">Hanyu Wang<span>Communications &amp; KM</span></div>
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<link href="wb.css" rel="stylesheet" />
+<script src="landpaths.js"></script>
+<script src="leadsmap.js"></script>
+<style>
+  .poster{width:1080px;height:1440px}
+  .mapwrap{padding:14px 60px 8px}
+  .mapwrap .frame{border:1px solid var(--rule);border-radius:4px;overflow:hidden;line-height:0}
+  .band{padding:46px 60px 40px}
+  .band .motif{right:-160px;top:-120px;width:540px;height:540px}
+  .band h1{font-weight:800;font-size:74px;line-height:1.0;letter-spacing:-.02em;margin-top:18px}
+  .band h1 .dot{color:var(--electric)}
+  .band p.sub{font-weight:300;font-size:23px;color:#cfe0ea;margin-top:16px;max-width:30ch}
+  .flow{display:flex;gap:10px;margin-top:30px}
+  .step{flex:1;background:rgba(255,255,255,.06);border-left:3px solid var(--electric);padding:14px 16px;border-radius:2px}
+  .step b{display:block;font-size:18px;font-weight:700}
+  .step span{display:block;font-size:13px;color:#aebfca;margin-top:4px;line-height:1.35}
+
+  .kpis{padding:34px 60px 30px}
+  .kpi .num{font-size:56px}
+  .kpi .lab{font-size:15px}
+  .kpi .ctx{font-size:13px}
+
+  .sec{padding:30px 60px 6px}
+  .sec h2{font-size:24px}
+  .sec .note{font-size:14px}
+
+  .bars{padding:18px 60px 14px;display:flex;flex-direction:column;gap:16px}
+  .bar{grid-template-columns:150px 1fr;gap:18px}
+  .bar .who{text-align:right}
+  .bar .who b{font-size:16px}
+  .bar .who span{font-size:12px}
+  .bar .track{height:38px}
+  .bar .fill{padding-right:14px;font-size:19px}
+  .bar .meta{left:14px;font-size:12.5px}
+  .tokyo{margin:6px 0 0 168px;font-size:13.5px;color:var(--muted);font-style:italic}
+  .tokyo b{color:var(--mid);font-style:normal}
+
+  .cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;padding:14px 60px 8px}
+  .card{padding:20px 18px}
+  .card .ico{width:34px;height:34px}
+  .card .big{font-size:30px;margin-top:12px}
+  .card .d{font-size:13.5px;margin-top:7px;line-height:1.4}
+
+  .case{margin:22px 60px 0;padding:26px 30px;gap:26px}
+  .case .lead{font-size:17px;line-height:1.4;max-width:38ch}
+  .case .big2{margin-left:auto;text-align:right;white-space:nowrap}
+  .case .big2 .a{font-size:22px;font-weight:600}
+  .case .big2 .b{font-size:52px;font-weight:800;letter-spacing:-.02em;line-height:1}
+
+  .foot{padding:18px 60px 20px}
+  .foot .src{font-size:11.5px;max-width:62ch}
+  .foot .by{font-size:12px}
+  .foot .by span{font-size:11px}
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <div class="band">
+    <svg class="motif" viewBox="0 0 600 600">
+      <circle cx="300" cy="300" r="60"/><circle cx="300" cy="300" r="120"/>
+      <circle cx="300" cy="300" r="180"/><circle cx="300" cy="300" r="240"/>
+      <circle cx="300" cy="300" r="300"/>
+    </svg>
+    <div class="ey">Development Impact · LEADS Initiative</div>
+    <h1>Learn.<span class="dot"> </span>Adapt.<span class="dot"> </span>Scale.</h1>
+    <p class="sub">Turning evidence into delivery — closing the gap between intention and impact.</p>
+    <div class="flow">
+      <div class="step"><b>Learn</b><span>Generate evidence through rigorous impact evaluation</span></div>
+      <div class="step"><b>Adapt</b><span>Adopt what works as projects are delivered</span></div>
+      <div class="step"><b>Scale</b><span>Expand proven approaches across regions</span></div>
+    </div>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><div class="num">$<em>18</em>B</div><div class="lab">financing reviewed</div><div class="ctx">across two regional cohorts</div></div>
+    <div class="kpi"><div class="num"><em>50</em>+</div><div class="lab">projects engaged</div><div class="ctx">in adaptive, evidence-led delivery</div></div>
+    <div class="kpi"><div class="num">up to <em>2&times;</em></div><div class="lab">greater impact</div><div class="ctx">through trial-and-adopt methods</div></div>
+  </div>
+
+  <div class="sec"><h2>One method, four regional convenings</h2>
+    <div class="note">LEADS workshops and financing reviewed, 2024 → 2026 · Cape Town → Lomé → New Delhi → Tokyo</div></div>
+  <div class="mapwrap"><div class="frame" id="leadsmap"></div></div>
+
+  <div class="sec"><h2>What adaptive delivery looks like</h2>
+    <div class="note">Selected evidence from LEADS projects in Africa</div></div>
+  <div class="cards">
+    <div class="card">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h7a3 3 0 013 3v11a2.5 2.5 0 00-2.5-2.5H3zM21 5h-7a3 3 0 00-3 3v11a2.5 2.5 0 012.5-2.5H21z"/></svg>
+      <div class="big"><em>5&times;</em> faster literacy</div>
+      <div class="d">Reading apps taught children to read five times faster than in-school instruction — at one-hundredth of the cost.</div>
+    </div>
+    <div class="card">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20a5.5 5.5 0 0111 0M16 5.5a3 3 0 010 5.8M17 20a5.5 5.5 0 00-3-4.9"/></svg>
+      <div class="big"><em>+50%</em> participation</div>
+      <div class="d">Role-model videos raised women's enrolment in skills training by half — a low-cost behavioral nudge.</div>
+    </div>
+    <div class="card">
+      <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3s6 6.5 6 11a6 6 0 01-12 0c0-4.5 6-11 6-11z"/></svg>
+      <div class="big"><em>+23%</em> utility revenue</div>
+      <div class="d">Prepaid water meters cut waste 14% and lifted utility revenues 23%, making services financially sustainable.</div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="src">Source: World Bank Development Impact (DECDI) — LEADS initiative, Africa LEADS, and the DIME flagship report “Driving Revolutionary Ideas into Practice” (2022). Figures as published on worldbank.org; aggregate LEADS figures per the LEADS initiative page.<br>Sample visualization — not an official World Bank publication. No World Bank logo or branding is used.</div>
+    <div class="by">Hanyu Wang<span>Communications &amp; KM</span></div>
+  </div>
+
+</div>
+<script>document.getElementById('leadsmap').innerHTML = window.leadsCropMap();</script>
+</body>
+</html>

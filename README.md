@@ -17,13 +17,17 @@ every figure is traced to a public source before it ships.
 
 ## Gallery
 
-| Traditional (Python) | AI studio (HTML → PNG) |
-|---|---|
-| ![bar](./gallery/python_bar_chart.png) | ![hero](./gallery/infographic_leads_hero.png) |
+Sample products built with the toolkit, all from public LEADS / DIME data:
 
-| Report chart sheet | The AI pipeline |
+| | |
 |---|---|
-| ![sheet](./gallery/report_chart_sheet.png) | ![pipeline](./gallery/ai_pipeline.png) |
+| **Flagship infographic**<br>![hero](./gallery/infographic_leads_hero.png) | **Report chart sheet**<br>![sheet](./gallery/report_chart_sheet.png) |
+| **Social card**<br>![social](./gallery/social_card.png) | **Newsletter**<br>![news](./gallery/newsletter.png) |
+| **DIME-AI product grid**<br>![ai](./gallery/dime_ai.png) | **Traditional Python bar**<br>![bar](./gallery/python_bar_chart.png) |
+
+The AI studio pipeline that produces them:
+
+![pipeline](./gallery/ai_pipeline.png)
 
 ---
 
@@ -55,8 +59,9 @@ so every chart is on-brand automatically. Equivalent **R** (`theme_dime.R`) and 
 ### Workflow 2 — AI studio (Windows; needs Edge or Chrome)
 ```powershell
 cd 2-ai-claude-code
-./render.ps1 templates\01_leads_hero 1080 1440
+./render.ps1 templates\01_leads_hero 1080 1440   # one template
 ./render.ps1 templates\03_linkedin_card 1200 1200
+./render_all.ps1                                  # all templates -> ./renders/
 ```
 Each `templates/*.html` keeps its numbers in a small **data block** near the top — update
 those, re-render, and the PNG (and PDF for print) regenerate. `wb.css` encodes the house
